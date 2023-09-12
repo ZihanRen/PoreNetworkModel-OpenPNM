@@ -15,7 +15,7 @@ class Wrap_pnm:
             self.im = im
         else:
             self.im = np.load(PATH)
-        if ( (PATH==None) and (im==None) ):
+        if ( (PATH==None) and (im.size==0) ):
             raise Exception("Sorry you need to provide both image PATH or image array")
 
         self.ws = op.Workspace()
